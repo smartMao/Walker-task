@@ -12,6 +12,7 @@
         }
         body{
             background:#3dbcff;
+            overflow: hidden;
         }
         *,*:after,*:before{
             -webkit-box-sizing: border-box;
@@ -56,7 +57,27 @@
             display: block;
             margin: 10px auto 0 auto;
         }
-
+        .four .bor{
+            border-left: 5px solid cadetblue;
+            border-top: 5px solid cadetblue;
+            border-bottom: 5px solid orange;
+            border-right: 5px solid orange;
+            border-radius: 50%;
+            height: 135px;
+            width: 135px;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+        }
+        .intr .a:hover .bor{
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
         .one .a{
         	background: url("image/1.jpg")no-repeat center;
             background-size: cover;
@@ -138,7 +159,9 @@
 		
     </div>
     <div class="intr four">
-        <div class="a"></div>
+        <div class="a">
+            <div class="bor"></div>
+        </div>
         <p>EE</p>
         <div class="b">
             <p>自学前端半年，喜爱代码，热爱这份职业。</p>
