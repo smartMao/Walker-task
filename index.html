@@ -41,20 +41,15 @@
         #box .intr{
             width: 25%;
             height: 400px;
-            /*background: firebrick;*/
             float: left;
             position: relative;
             margin: 0 auto;
             border-left: 1px solid rgba(255,255,255,.4);
-            /*box-shadow: 0 0 1px white;*/
         }
         #box .intr:nth-last-child(1){
             border-right: 1px solid rgba(255,255,255,.4);
         }
-        .one .a,
-        .two .a,
-        .three .a,
-        .four .a{
+        .intr .a{
             height: 135px;
             width: 135px;
             border-radius: 50%;
@@ -75,25 +70,18 @@
             background-size: cover;
         }
         .four .a{
-            /*background: url("image/4.jpg") no-repeat center;*/
             background: url("image/4.jpg") no-repeat center;
             background-size: cover;
 
         }
-		.one p,
-        .two p,
-        .three p,
-        .four p{
+        .intr p{
             font-size: 20px;
             color: white;
             text-align: center;
             padding: 15px 0;
         }
 
-		.one p:after,
-        .two p:after,
-        .three p:after,
-        .four p:after{
+        .intr p:after{
             content: "";
             width: 60%;
             background: white;
@@ -107,8 +95,6 @@
             -o-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
         }
-
-
         .b{
             width: 88%;
             font-size: 20px;
