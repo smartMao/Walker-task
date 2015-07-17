@@ -30,55 +30,58 @@
         h3{
             text-align: center;
             color: white;
-            margin-top: 50px;
+            margin-top: 43px;
             font-size: 20px;
         }
         #box{
-            width: 100%;
+            width: 80%;
             height: 100px;
-            position: absolute;
-            top: 40%;
-            -webkit-transform: translateY(-40%);
-            -moz-transform: translateY(-40%);
-            -ms-transform: translateY(-40%);
-            -o-transform: translateY(-40%);
-            transform: translateY(-40%);
+            margin: 120px auto 0 auto;
         }
         #box .intr{
-            width: 16.6%;
+            width: 25%;
             height: 400px;
             /*background: firebrick;*/
             float: left;
             position: relative;
+            margin: 0 auto;
             border-left: 1px solid rgba(255,255,255,.4);
             /*box-shadow: 0 0 1px white;*/
         }
+        #box .intr:nth-last-child(1){
+            border-right: 1px solid rgba(255,255,255,.4);
+        }
+        .one .a,
         .two .a,
-        .fifth .a,
         .three .a,
         .four .a{
             height: 135px;
             width: 135px;
             border-radius: 50%;
-            /*background: peachpuff;*/
             display: block;
             margin: 10px auto 0 auto;
-            background: url("http://7xk7x6.com1.z0.glb.clouddn.com/psb.jpg") no-repeat center;
-            background-size: cover;
         }
 
-        .two .a{
+        .one .a{
         	background: url("image/1.jpg")no-repeat center;
+            background-size: cover;
+        } 
+        .two .a{
+        	background: url("image/3.jpg")no-repeat center;
+            background-size: cover;
         } 
         .three .a{
-        	background: url("image/3.jpg")no-repeat center;
-        } 
-        .four .a{
         	background: url("image/2.jpg")no-repeat center;
+            background-size: cover;
         }
+        .four .a{
+            /*background: url("image/4.jpg") no-repeat center;*/
+            background: url("image/4.jpg") no-repeat center;
+            background-size: cover;
 
-		.two p,
-        .fifth p,
+        }
+		.one p,
+        .two p,
         .three p,
         .four p{
             font-size: 20px;
@@ -87,8 +90,8 @@
             padding: 15px 0;
         }
 
-		.two p:after,
-        .fifth p:after,
+		.one p:after,
+        .two p:after,
         .three p:after,
         .four p:after{
             content: "";
@@ -104,17 +107,18 @@
             -o-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
         }
-		
+
 
         .b{
             width: 88%;
             font-size: 20px;
             margin: 0 auto;
-            text-align: left;
+            text-align: center;
             color: white;
         }
         .b h4{
             font-weight: normal;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -123,46 +127,37 @@
 <h3>队伍介绍:由一群怀揣着梦想的年轻人组成的团队</h3>
 <div id="box">
     <div class="intr one">
-
-    </div>
-    <div class="intr two">
 		<div class="a"></div>
          <p>muzi1102</p>
         <div class="b">
-        	<p>个人介绍</p>
             <p>上学(大二),自学前端5个月,我是前端路上的漫步者,一步一个脚印。</p>
-            <p>目标：前端工程师</p>
+            <h4>目标：前端工程师</h4>
         </div>
     </div>
-    <div class="intr three">
+    <div class="intr two">
 		<div class="a"></div>
         <p>smartMao</p>
         <div class="b">
-            <p>个人介绍</p>
             <p>不积跬步 无以至千里。爱生活，爱Code，在未知的道路中探索</p>
-            <p>目标：后端工程师</p>
+            <h4>目标：后端工程师</h4>
         </div>
     </div>
-    <div class="intr four">
+    <div class="intr three">
     <div class="a"></div>
         <p>chentwo</p>
         <div class="b">
-            <p>个人介绍</p>
             <p>喜欢一切新鲜的事物和不了解的东西，在接触中洞悉，了解他们。</p>
-            <p>目标：前端工程师</p>
+            <h4>目标：前端工程师</h4>
         </div>
 		
     </div>
-    <div class="intr fifth">
+    <div class="intr four">
         <div class="a"></div>
         <p>EE</p>
         <div class="b">
-            <p>现状：已参加工作，HTML5 + CSS + JavaScript自学半年</p>
-            <h4>目标：<strong>前端开发工程师</strong></h4>
+            <p>自学前端半年，喜爱代码，热爱这份职业。</p>
+            <h4>目标：前端开发工程师</h4>
         </div>
-    </div>
-    <div class="intr six">
-
     </div>
 </div>
 </body>
