@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>My team</title>
+    <title>Our team</title>
     <style>
         *{
             padding: 0;
@@ -53,7 +53,10 @@
             border-left: 1px solid rgba(255,255,255,.4);
             /*box-shadow: 0 0 1px white;*/
         }
-        .fifth .a{
+        .two .a,
+        .fifth .a,
+        .three .a,
+        .four .a{
             height: 135px;
             width: 135px;
             border-radius: 50%;
@@ -63,13 +66,31 @@
             background: url("http://7xk7x6.com1.z0.glb.clouddn.com/psb.jpg") no-repeat center;
             background-size: cover;
         }
-        .fifth p{
+
+        .two .a{
+        	background: url("image/1.jpg")no-repeat center;
+        } 
+        .three .a{
+        	background: url("image/3.jpg")no-repeat center;
+        } 
+        .four .a{
+        	background: url("image/2.jpg")no-repeat center;
+        }
+
+		.two p,
+        .fifth p,
+        .three p,
+        .four p{
             font-size: 20px;
             color: white;
             text-align: center;
             padding: 15px 0;
         }
-        .fifth p:after{
+
+		.two p:after,
+        .fifth p:after,
+        .three p:after,
+        .four p:after{
             content: "";
             width: 60%;
             background: white;
@@ -83,6 +104,8 @@
             -o-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
         }
+		
+
         .b{
             width: 88%;
             font-size: 20px;
@@ -96,20 +119,39 @@
     </style>
 </head>
 <body>
-<header>队名:Walker</header>
-<h3>队伍介绍:XXXXXXXXXXXXXX</h3>
+<header>Walker</header>
+<h3>队伍介绍:由一群怀揣着梦想的年轻人组成的团队</h3>
 <div id="box">
     <div class="intr one">
 
     </div>
     <div class="intr two">
-
+		<div class="a"></div>
+         <p>muzi1102</p>
+        <div class="b">
+        	<p>个人介绍</p>
+            <p>上学(大二),自学前端5个月,我是前端路上的漫步者,一步一个脚印。</p>
+            <p>目标：前端工程师</p>
+        </div>
     </div>
     <div class="intr three">
-
+		<div class="a"></div>
+        <p>smartMao</p>
+        <div class="b">
+            <p>个人介绍</p>
+            <p>不积跬步 无以至千里。爱生活，爱Code，在未知的道路中探索</p>
+            <p>目标：后端工程师</p>
+        </div>
     </div>
     <div class="intr four">
-
+    <div class="a"></div>
+        <p>chentwo</p>
+        <div class="b">
+            <p>个人介绍</p>
+            <p>喜欢一切新鲜的事物和不了解的东西，在接触中洞悉，了解他们。</p>
+            <p>目标：前端工程师</p>
+        </div>
+		
     </div>
     <div class="intr fifth">
         <div class="a"></div>
