@@ -7,7 +7,7 @@
 
 团队网站：[点击查看](http://smartmao.github.io/Walker-task/)
 
-团队简介：有梦想的猪
+团队简介：一群有梦想的猪
 
 团队成员：
 
@@ -16,4 +16,6 @@
 2. smartMao
 
 3. Erane
+
+4. muzi1102
 
