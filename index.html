@@ -51,32 +51,47 @@
             border-right: 1px solid rgba(255,255,255,.4);
         }
         .intr .a{
-            height: 135px;
-            width: 135px;
+            height: 150px;
+            width: 150px;
             border-radius: 50%;
             display: block;
-            margin: 10px auto 0 auto;
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translate(-50%, 0);
+            -moz-transform: translate(-50%, 0);
+            -ms-transform: translate(-50%, 0);
+            -o-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
         }
-        .four .bor{
-            border-left: 5px solid cadetblue;
-            border-top: 5px solid cadetblue;
-            border-bottom: 5px solid orange;
-            border-right: 5px solid orange;
+
+        .intr .bor{
+            position: absolute;
+            height:150px;
+            width: 150px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid orangered;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid orangered;
             border-radius: 50%;
-            height: 135px;
-            width: 135px;
-            -webkit-transition: all .5s;
-            -moz-transition: all .5s;
-            -ms-transition: all .5s;
-            -o-transition: all .5s;
-            transition: all .5s;
+            left: 50%;
+            margin-left: -75px;
+            /*-webkit-transform: translate(-50%, 0);*/
+            /*-moz-transform: translate(-50%, 0);*/
+            /*-ms-transform: translate(-50%, 0);*/
+            /*-o-transform: translate(-50%, 0);*/
+            /*transform: translate(-50%, 0);*/
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
         }
-        .intr .a:hover .bor{
-            -webkit-transform: rotate(180deg);
-            -moz-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-            -o-transform: rotate(180deg);
-            transform: rotate(180deg);
+        .intr .bor:hover{
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
         }
         .one .a{
         	background: url("image/1.jpg")no-repeat center;
@@ -95,13 +110,13 @@
             background-size: cover;
 
         }
-        .intr p{
+        .intr .name{
             font-size: 20px;
             color: white;
             text-align: center;
             padding: 15px 0;
+            margin-top: 150px;
         }
-
         .intr p:after{
             content: "";
             width: 60%;
@@ -109,7 +124,7 @@
             height: 2px;
             position: absolute;
             left: 50%;
-            top: 50%;
+            top: 53%;
             -webkit-transform: translate(-50%,-50%);
             -moz-transform: translate(-50%,-50%);
             -ms-transform: translate(-50%,-50%);
@@ -119,7 +134,7 @@
         .b{
             width: 88%;
             font-size: 20px;
-            margin: 0 auto;
+            margin: 32px auto 0 auto;
             text-align: center;
             color: white;
         }
@@ -135,7 +150,8 @@
 <div id="box">
     <div class="intr one">
 		<div class="a"></div>
-         <p>muzi1102</p>
+        <div class="bor"></div>
+         <p class="name">muzi1102</p>
         <div class="b">
             <p>上学(大二),自学前端5个月,我是前端路上的漫步者,一步一个脚印。</p>
             <h4>目标：前端工程师</h4>
@@ -143,7 +159,8 @@
     </div>
     <div class="intr two">
 		<div class="a"></div>
-        <p>smartMao</p>
+        <div class="bor"></div>
+        <p class="name">smartMao</p>
         <div class="b">
             <p>不积跬步 无以至千里。爱生活，爱Code，在未知的道路中探索</p>
             <h4>目标：后端工程师</h4>
@@ -151,7 +168,8 @@
     </div>
     <div class="intr three">
     <div class="a"></div>
-        <p>chentwo</p>
+        <div class="bor"></div>
+        <p class="name">chentwo</p>
         <div class="b">
             <p>喜欢一切新鲜的事物和不了解的东西，在接触中洞悉，了解他们。</p>
             <h4>目标：前端工程师</h4>
@@ -159,10 +177,9 @@
 		
     </div>
     <div class="intr four">
-        <div class="a">
+            <div class="a"></div>
             <div class="bor"></div>
-        </div>
-        <p>EE</p>
+        <p class="name">EE</p>
         <div class="b">
             <p>自学前端半年，喜爱代码，热爱这份职业。</p>
             <h4>目标：前端开发工程师</h4>
