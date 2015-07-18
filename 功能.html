@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name = "viewport" content = "width = device-width">
+    <meta name = "viewport" content = "initial-scale = 1.0">
+    <meta name = "viewport" content = "height = device-height">
+    <meta name = "viewport" content = "maximum-scale=1.0">
+    <meta name = "viewport" content = "user-scalable=no">
+    <meta name = "viewport" content = "user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            border: none;
+        }
+        *,*:after,*:before{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        @font-face {font-family: 'iconfont';
+            src: url('fonts/iconfont.eot'); /* IE9*/
+            src: url('fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+            url('fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+        }
+        .iconfont{
+            font-family:"iconfont" !important;
+            font-size:16px;font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;}
+        html{
+            font-size: 62.5%
+        }
+        body{
+            font-size: 1.4rem;
+        }
+        header{
+            position: fixed;
+            z-index: 800;
+            background: rgba(142,212,152,1);
+            width: 100%;
+            line-height: 100px;
+            left: 0;
+            right: 0;
+            top: 0;
+            color: white;
+            text-align: center;
+        }
+        .icon-left{
+            float: left;
+            margin-left: 17px;
+        }
+        .icon-right{
+            float: right;
+            margin-right: 17px;
+        }
+        .icon-left i,
+        .icon-right i{
+            font-size: 6rem;
+        }
+        header h2{
+            position: absolute;
+            font-size: 5rem;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+        main{
+            position: absolute;
+            width: 100%;
+            top: 113px;
+            overflow-y: scroll;
+        }
+        main .content{
+            /*background: cornflowerblue;*/
+        }
+        .content .every-cont{
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            height: 2000px;
+        }
+        .every-cont li{
+            flex-grow: 1;
+            border-bottom: 2px dashed #8e8e8e;
+            min-height: 100px;
+            position: relative;
+            width: 100%;
+            display: flex;
+        }
+        .every-cont li div{
+            flex-grow: 1;
+            position: relative;
+        }
+        .box-icon{
+            width: 20%;
+            /*background: red;*/
+        }
+        .box-icon i{
+            font-size: 11rem;
+            color: rgba(142,212,152,1);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .box-cate{
+            width: 20%;
+            /*background: cadetblue;*/
+        }
+        .box-cate h4,.box-money p{
+            font-size: 6.5rem;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        .box-cate h4{
+            color: #8e8e8e;
+        }
+        .box-money{
+            width: 30%;
+        }
+        .moneyIn-color{
+            color: rgba(142,212,152,1);
+        }
+        .moneyOut-color{
+            color: rgba(219,107,97,1);
+        }
+        .box-hide{
+            width: 30%;
+            text-align: right;
+        }
+        .box-hide p{
+            color: #8e8e8e;
+            font-size: 2.6rem;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="icon-left">
+        <i class="iconfont icon-css">&#xe656;</i>
+    </div>
+    <h2>记账本</h2>
+    <div class="icon-right">
+        <i class="iconfont icon-css">&#xe627;</i>
+    </div>
+</header>
+<main>
+    <div class="content">
+        <ul class="every-cont">
+            <li>
+                    <div class="box-icon">
+                        <i class="iconfont icon-css">&#xe61f;</i>
+                    </div>
+                    <div class="box-cate">
+                        <h4>收入</h4>
+                    </div>
+                    <div class="box-money">
+                        <p class="moneyIn-color">+8888</p>
+                    </div>
+                    <div class="box-hide">
+                        <p>18/7/2015</p>
+
+                    </div>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</main>
+</body>
+</html>
