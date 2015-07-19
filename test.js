@@ -38,7 +38,7 @@ addAccount.onclick = function(){
 
 function loadingAccount(){
 
-	localStorage.clear(); 
+	//localStorage.clear(); 
 
 	//console.log(localStorage);
 
