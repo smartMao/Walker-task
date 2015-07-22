@@ -35,7 +35,6 @@ function findAllStroage(){
 	for( k in localStorage ){
 
 		var dataObj = JSON.parse( localStorage.getItem(k) ); // 循环地把每一条字符串数据解析回JSON对象
-		console.log(dataObj);
 		var content = "<ul><li>"+ dataObj.accountType +"</li><li>"+ dataObj.accountMoney +"</li><li>"+ dataObj.accountDesc +"</li><li>"+ dataObj.accountTime +"</li></ul>";
 	
 		var element = document.createElement("div");
