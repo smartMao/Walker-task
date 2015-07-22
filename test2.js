@@ -1,4 +1,3 @@
-window.onload = function(){
 
 	var addAccount   = document.getElementById('add-account');
 	var accountType  = document.getElementById('account-type');
@@ -7,7 +6,7 @@ window.onload = function(){
 	var accountList  = document.getElementById('account-list');
 
 
-	function saveStroage(){
+	function saveStorage(){
 
 		var time = new Date().getTime();
 		var data = new Object();
@@ -32,7 +31,7 @@ window.onload = function(){
 		
 	}
 
-	function findAllStroage(){
+	function findAllStorage(){
 
 		for( k in localStorage ){
 
@@ -48,6 +47,4 @@ window.onload = function(){
 
 	}
 
-	findAllStroage();
-
-}
+	findAllStorage();
