@@ -245,9 +245,9 @@
                     aboveX=-(Box.offsetWidth - aLi.offsetWidth)
                 }
             }
-            aLi.addEventListener('touchstart',touchStart,false);
-            aLi.addEventListener('touchmove',touchMove,false);
-            aLi.addEventListener('touchend',touchend,false)
+            aLi[0].addEventListener('touchstart',touchStart,false);
+            aLi[0].addEventListener('touchmove',touchMove,false);
+            aLi[0].addEventListener('touchend',touchend,false)
         }
     </script>
 </head>
