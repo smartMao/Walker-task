@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
+<!doctype html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title></title>
     <meta name = "viewport" content = "width = device-width">
     <meta name = "viewport" content = "initial-scale = 1.0">
     <meta name = "viewport" content = "height = device-height">
@@ -10,20 +9,23 @@
     <meta name = "viewport" content = "user-scalable=no">
     <meta name = "viewport" content = "user-scalable=no">
     <meta content="telephone=no" name="format-detection" />
+    <title>Document</title>
     <style>
         *{
             padding: 0;
             margin: 0;
             list-style: none;
-            text-decoration: none;
-            border: none;
         }
-        *,*:after,*:before{
+        *,*::after,*::before{
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
-            -o-box-sizing: border-box;
-            -ms-box-sizing: border-box;
             box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            font-size: 1.4rem;
         }
         @font-face {font-family: 'iconfont';
             src: url('fonts/iconfont.eot'); /* IE9*/
@@ -38,198 +40,250 @@
             -webkit-font-smoothing: antialiased;
             -webkit-text-stroke-width: 0.2px;
             -moz-osx-font-smoothing: grayscale;}
-        html{
-            font-size: 62.5%
-        }
-        body{
-            font-size: 1.4rem;
+        input{
+            border: none;
+            background: none;
+            outline: none;
         }
         header{
-            position: fixed;
-            z-index: 800;
-            background: rgba(142,212,152,1);
+            background: rgb(142,212,152);
             width: 100%;
-            line-height: 100px;
-            left: 0;
-            right: 0;
+            height: 100px;
+            position: fixed;
             top: 0;
+            left: 0;
+            display: flex;
+            z-index: 888;
+        }
+        .head-nav-left,.head-wirte{
+            flex-grow: 1;
+        }
+        .head-text{
+            flex-grow: 10;
             color: white;
+        }
+        .head-text h4{
+            font-size: 4.5rem;
+        }
+        header > div{
             text-align: center;
+            margin: auto;
         }
-        .icon-left{
-            float: left;
-            margin-left: 17px;
-        }
-        .icon-right{
-            float: right;
-            margin-right: 17px;
-        }
-        .icon-left i,
-        .icon-right i{
+        .head-nav-left i,.head-wirte i{
+            color: white;
             font-size: 6rem;
         }
-        header h2{
-            position: absolute;
-            font-size: 5rem;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            -moz-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            -o-transform: translateX(-50%);
-            transform: translateX(-50%);
-        }
         main{
-            position: absolute;
             width: 100%;
-            top: 113px;
+            position: absolute;
+            top: 100px;
             overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
         }
-        main .content{
+        main #content{
+            width: 95%;
+            height: 1000px;
+            float: right;
+            /*overflow: hidden;*/
             /*background: cornflowerblue;*/
         }
-        .content .every-cont{
-            width: 95%;
-            margin: 0 auto;
+        #content ul {
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            height: 2000px;
-        }
-        .every-cont li{
-            flex-grow: 1;
-            border-bottom: 2px dashed #8e8e8e;
-            min-height: 100px;
             position: relative;
+            /*overflow: hidden;*/
+        }
+        #content ul li{
             width: 100%;
-            display: flex;
-        }
-        .every-cont li div{
+            height: 100%;
             flex-grow: 1;
-            /*position: relative;*/
             display: flex;
+            text-align: left;
+            border-top: 2px dashed #8e8e8e;
+            /*overflow: hidden;*/
+            position: relative;
+            left: 0;
+            top: 0;
         }
-        .box-icon,
-        .box-money,
-        .box-cate{
-            align-items: center;
-            justify-content: center;
+        #content ul li:nth-child(1){
+            border: none;
+        }
+        .theBox{
+            position: absolute;
+            width: 130%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            /*border-bottom: 2px dashed #8e8e8e;*/
+            /*background: red;*/
             display: flex;
         }
         .box-icon{
-            width: 20%;
-            /*background: red;*/
+            min-width: 100px;
+            flex-grow: .3;
+            margin: auto;
         }
-        .box-icon i{
-            font-size: 11rem;
-            color: rgba(142,212,152,1);
-            /*position: absolute;*/
-            /*left: 50%;*/
-            /*top: 50%;*/
-            /*-webkit-transform: translate(-50%, -50%);*/
-            /*-moz-transform: translate(-50%, -50%);*/
-            /*-ms-transform: translate(-50%, -50%);*/
-            /*-o-transform: translate(-50%, -50%);*/
-            /*transform: translate(-50%, -50%);*/
+        .box-text{
+            min-width: 100px;
+            margin: auto;
         }
-        .box-cate{
-            width: 20%;
-            /*background: cadetblue;*/
-        }
-        .box-cate h4,.box-money p{
-            font-size: 6.5rem;
-            /*position: absolute;*/
-            /*top: 50%;*/
-            /*-webkit-transform: translateY(-50%);*/
-            /*-moz-transform: translateY(-50%);*/
-            /*-ms-transform: translateY(-50%);*/
-            /*-o-transform: translateY(-50%);*/
-            /*transform: translateY(-50%);*/
-        }
-        .box-cate h4{
+        .box-text h4{
+            font-size: 5rem;
             color: #8e8e8e;
+            font-style: normal;
+            font-weight: normal;
         }
         .box-money{
-            width: 25%;
+            flex-grow: 2;
+            min-width: 200px;
+            margin: auto;
+            /*text-align: center;*/
         }
-        .moneyIn-color{
-            color: rgba(142,212,152,1);
+        .box-money input{
+           float: left;
+            color:  rgb(142,212,152);
+            font-size:5rem;
+            padding-left: 15%;
         }
-        .moneyOut-color{
-            color: rgba(219,107,97,1);
+        .box-time{
+            flex-grow: 5;
         }
-        .box-Showtime{
-            width: 35%;
-            position: relative;
-            /*align-items: center;*/
-            /*display: none;*/
-        }
-        .box-Showtime p{
-            position: absolute;
-            right: 0;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            -o-transform: translateY(-50%);
-            transform: translateY(-50%);
+        .box-time p{
+            font-size: 2rem;
+            padding-top: 15%;
             color: #8e8e8e;
-            font-size: 2.6rem;
         }
         .box-change{
-            flex-grow:2;
-            background: rgb(215,76,61);
-           position: relative;
-            left: -99999px;
-        }
-        .box-changeIcon-left,.box-changeIcon-right{
-            flex: 1;
-            align-items: center;
-            justify-content: center;
-        }
-        .box-changeIcon-left i,.box-changeIcon-right i{
-            font-size:10rem;
-            color: white;
+            width: 20%;
             /*position: absolute;*/
-            /*left: 50%;*/
-            /*top: 50%;*/
-            /*-webkit-transform: translate(-50%, -50%);*/
-            /*-moz-transform: translate(-50%, -50%);*/
-            /*-ms-transform: translate(-50%, -50%);*/
-            /*-o-transform: translate(-50%, -50%);*/
-            /*transform: translate(-50%, -50%);*/
+            position: relative;
+            /*left: 100%;*/
+            /*top: 0;*/
+            /*bottom: 0;*/
+            /*right: 0;*/
+            display: flex;
+            color: white;
+            background:rgb(215,76,61);
         }
+        .box-change-write,.box-change-del{
+            text-align: center;
+            width: 50%;
+            margin: auto;
+        }
+        .box-change-write i,.box-change-del i{
+            font-size: 7rem;
+        }
+        .box-icon i{
+            color:  rgb(142,212,152);
+            font-size: 7rem;
+        }
+        /*.a{*/
+            /*flex: 1;*/
+            /*display: flex;*/
+        /*}*/
+        /*.b{*/
+           /*width: 20%;*/
+            /*flex: 1;*/
+        /*}*/
+        /*.box-con>div{*/
+            /*background: coral;*/
+            /*float: left;*/
+        /*}*/
+        /*.box-con>div:nth-child(2n){*/
+            /*background: cornflowerblue;*/
+        /*}*/
     </style>
+    <script>
+        function getStyle(obj,attr){
+            return obj.currentStyle[attr]?obj.currentStyle[attr]:getComputedStyle(obj,false)[attr]
+        }
+        function addEvent(obj,type,fn){
+            if(document.addEventListener){
+                obj.addEventListener(type,fn,false)
+            }
+        }
+        function removeEvent(obj,type,fn){
+            if(document.removeEventListener){
+                obj.removeEventListener(type,fn,false)
+            }
+        }
+        window.onload=function(){
+            var aLi=document.querySelector(".box-con");
+            var Box=document.querySelector(".theBox");
+            var box_change = document.querySelector(".box-change");
+            var theWidth=Box.offsetWidth + box_change.offsetWidth;
+            var start="ontouchstart" in window?"touchstart":"click";
+            var startX,moveX,aboveX;
+            console.log(Box.offsetWidth - aLi.offsetWidth)
+            function touchStart(event){
+                var e=event||window.event;
+                var touch= e.changedTouches[0];
+                startX=touch.pageX||touch.clientX;
+            }
+            function touchMove(event){
+                event.preventDefault();
+                var e=event||window.event;
+                var touch= e.changedTouches[0];
+                var myclient=touch.pageX||touch.clientX;
+                moveX=myclient - startX;
+                aLi.style.left=aboveX + moveX +"px"
+            }
+            function touchend(event){
+//                event.preventDefault();
+                aboveX=parseInt(aLi.style.left)
+                if(moveX > 0){
+                    $(aLi).animate({left:0},200);
+                    aboveX=0
+                }
+                if(moveX < 0 && aboveX < -(Box.offsetWidth - aLi.offsetWidth)){
+                    $(aLi).animate({left:-(Box.offsetWidth - aLi.offsetWidth)},200);
+                    aboveX=-(Box.offsetWidth - aLi.offsetWidth)
+                }
+            }
+            aLi.addEventListener('touchstart',touchStart,false);
+            aLi.addEventListener('touchmove',touchMove,false);
+            aLi.addEventListener('touchend',touchend,false)
+        }
+    </script>
 </head>
 <body>
 <header>
-    <div class="icon-left">
-        <i class="iconfont icon-css">&#xe656;</i>
+    <div class="head-nav-left">
+        <i class="iconfont">&#xe656;</i>
     </div>
-    <h2>记账本</h2>
-    <div class="icon-right">
-        <i class="iconfont icon-css">&#xe627;</i>
+    <div class="head-text">
+        <h4>记账本</h4>
+    </div>
+    <div class="head-wirte">
+        <i class="iconfont">&#xe627;</i>
     </div>
 </header>
 <main>
-    <div class="content">
-        <ul class="every-cont">
-            <li>
-                    <div class="box-icon">
-                        <i class="iconfont icon-css">&#xe61f;</i>
-                    </div>
-                    <div class="box-cate">
-                        <h4>收入</h4>
-                    </div>
-                    <div class="box-money">
-                        <p class="moneyIn-color">+8888</p>
-                    </div>
-                    <div class="box-Showtime">
-                        <p>18/7/2015</p>
+    <div id="content">
+        <ul>
+            <li class="box-con">
+                <div class="theBox">
+                        <div class="box-icon">
+                            <i class="iconfont">&#xe61f;</i>
+                        </div>
+                        <div class="box-text">
+                            <h4>收入</h4>
+                        </div>
+                        <div class="box-money">
+                            <!--<p>+</p>-->
+                            <input value="+ 8888" type="text" disabled="disabled">
+                        </div>
+                        <div class="box-time">
+                            <p>2015/7/22</p>
+                        </div>
                         <div class="box-change">
-                            <div class="box-changeIcon-left">
-                                <i class="iconfont icon-css">&#xe691;</i>
+                            <div class="box-change-write">
+                                <i class="iconfont">&#xe691;</i>
                             </div>
-                            <div class="box-changeIcon-right">
-                                <i class="iconfont icon-css">&#xe675;</i>
+                            <div class="box-change-del">
+                                <i class="iconfont">&#xe675;</i>
                             </div>
                         </div>
                     </div>
@@ -240,11 +294,9 @@
             <li></li>
             <li></li>
             <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
         </ul>
     </div>
 </main>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 </html>
