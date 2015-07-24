@@ -199,9 +199,6 @@
         /*}*/
     </style>
     <script>
-        function getStyle(obj,attr){
-            return obj.currentStyle[attr]?obj.currentStyle[attr]:getComputedStyle(obj,false)[attr]
-        }
         function addEvent(obj,type,fn){
             if(document.addEventListener){
                 obj.addEventListener(type,fn,false)
@@ -212,42 +209,68 @@
                 obj.removeEventListener(type,fn,false)
             }
         }
+        function gteStyle(obj,attr){
+            return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj,false)[attr]
+        }
+        var get={
+            byClass:function(aclass,parent){
+                if(document.getElementsByClassName){
+                    return document.getElementsByClassName(aclass)
+                }
+                var Oparent=parent?document.getElementById(parent):document,
+                        eles=[],
+                        elemts=Oparent.getElementsByTagName("*");
+                for(var i=0;i<elemts.length;i++){
+                    if(elemts[i].className == aclass){
+                        eles.push(elemts[i])
+                    }
+                }
+                return eles;
+            }
+        };
         window.onload=function(){
-            var aLi=document.querySelector(".box-con");
-            var Box=document.querySelector(".theBox");
-            var box_change = document.querySelector(".box-change");
-            var theWidth=Box.offsetWidth + box_change.offsetWidth;
-            var start="ontouchstart" in window?"touchstart":"click";
-            var startX,moveX,aboveX;
-            console.log(aLi[0])
-            function touchStart(event){
-                var e=event||window.event;
-                var touch= e.changedTouches[0];
-                startX=touch.pageX||touch.clientX;
-            }
-            function touchMove(event){
-                event.preventDefault();
-                var e=event||window.event;
-                var touch= e.changedTouches[0];
-                var myclient=touch.pageX||touch.clientX;
-                moveX=myclient - startX;
-                aLi.style.left=aboveX + moveX +"px"
-            }
-            function touchend(event){
-//                event.preventDefault();
-                aboveX=parseInt(aLi.style.left)
-                if(moveX > 0){
-                    $(aLi).animate({left:0},200);
-                    aboveX=0
+            var aLi=get.byClass("box-con");
+            var theBox=get.byClass("theBox")[0];
+            var startTouch,moveTouch,aboveX=0;
+
+            var event={
+                touchStart:function(e){
+                    e.preventDefault();
+                    var touch = e.changedTouches[0];
+                    startTouch={
+                        x:touch.pageX||touch.clientX
+                    };
+                    addEvent(this,'touchmove',event.touchMove)
+                    addEvent(this,'touchend',event.touchEnd)
+                },
+                touchMove:function(e){
+                    e.preventDefault();
+                    if(e.changedTouches.length>1 || e.scale && e.scale !==1){
+                        return
+                    }
+                    var touch= e.changedTouches[0];
+                    moveTouch={
+                        x:touch.pageX||touch.clientX
+                    };
+                    this.style.left=aboveX+(moveTouch.x - startTouch.x)+"px";
+                },
+                touchEnd:function(){
+                    aboveX=parseInt(this.style.left);
+                    if(aboveX > 0){
+                        $(this).animate({left:0},200);
+                        aboveX=0
+                    }
+                    if(aboveX < 0 && aboveX < -(theBox.offsetWidth - this.offsetWidth)){
+                        $(this).animate({left:-(theBox.offsetWidth - this.offsetWidth)},200);
+                        aboveX=-(theBox.offsetWidth - this.offsetWidth)
+                    }
+                    removeEvent(this,'touchmove',event.touchMove);
+                    removeEvent(this,'touchmove',event.touchEnd)
                 }
-                if(moveX < 0 && aboveX < -(Box.offsetWidth - aLi.offsetWidth)){
-                    $(aLi).animate({left:-(Box.offsetWidth - aLi.offsetWidth)},200);
-                    aboveX=-(Box.offsetWidth - aLi.offsetWidth)
-                }
+            };
+            for(var i=0;i<aLi.length;i++){
+                addEvent(aLi[i],'touchstart',event.touchStart)
             }
-            aLi.addEventListener('touchstart',touchStart,false);
-            aLi.addEventListener('touchmove',touchMove,false);
-            aLi.addEventListener('touchend',touchend,false)
         }
     </script>
 </head>
@@ -260,7 +283,7 @@
         <h4>记账本</h4>
     </div>
     <div class="head-wirte">
-        <i class="iconfont" onclick="window.location='add-account.html'">&#xe627;</i>
+        <i class="iconfont">&#xe627;</i>
     </div>
 </header>
 <main>
@@ -300,7 +323,6 @@
         </ul>
     </div>
 </main>
-<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="localStorage.js"></script>
+<script src="jq/jquery-2.1.4.min.js"></script>
 </body>
 </html>

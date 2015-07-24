@@ -46,7 +46,7 @@
             outline: none;
         }
         header{
-            background: rgb(142,212,152);
+            background: rgb(110,120,119);
             width: 100%;
             height: 100px;
             position: fixed;
@@ -197,6 +197,73 @@
         /*.box-con>div:nth-child(2n){*/
             /*background: cornflowerblue;*/
         /*}*/
+        
+        #content table{
+            margin:0 auto;
+            margin-right:150px;
+        }
+    
+        #content table tr{
+            line-height: 130px;
+        }
+
+        #content table tr .desc{
+            text-indent: -200px;
+          
+        }
+
+        #content table tr td,
+        #content table tr td select,
+        #content table tr td option
+        {
+            font-size:5rem;
+        }
+    
+        /* 多选框 */
+        #content table tr td #account-type{
+            border:4px solid #ccc;
+            border-radius: 10px;
+        }
+
+        /* 金额框  */
+        #content table tr td #account-money{
+            border:4px solid #ccc;
+            border-radius: 10px;
+            height: 80px;
+            width: 150px;
+            display: block;
+            margin-top:-12px;
+            font-size:5rem;
+            text-indent: 10px;
+        }
+        
+        /* 描述框 */
+        #content table tr td #account-desc{
+            border:4px solid #ccc;
+            border-radius: 10px;
+            height: 80px;
+            width: 650px;
+            display: block;
+            margin-top:0px;
+            font-size:5rem;
+            text-indent: 10px;
+        }
+        
+        /* 添加账目按钮 */
+        #content table tr td #account-add{
+            display: block;
+            position: absolute;
+            width: 500px;height: 100px;
+            font-size: 5rem;
+            border-radius: 10px;
+            box-shadow: 0 0 0 0;
+        }
+
+        
+
+        
+        
+
     </style>
     <script>
         function getStyle(obj,attr){
@@ -253,51 +320,47 @@
 </head>
 <body>
 <header>
+
     <div class="head-nav-left">
-        <i class="iconfont">&#xe656;</i>
+        <i class="iconfont" onclick="window.location = 'index.html'">&#xe656;</i>
     </div>
     <div class="head-text">
-        <h4>记账本</h4>
+        <h4>记录账目</h4>
     </div>
-    <div class="head-wirte">
-        <i class="iconfont" onclick="window.location='add-account.html'">&#xe627;</i>
-    </div>
+
 </header>
 <main>
     <div id="content">
-        <ul>
-            <li class="box-con">
-                <div class="theBox">
-                        <div class="box-icon">
-                            <i class="iconfont">&#xe61f;</i>
-                        </div>
-                        <div class="box-text">
-                            <h4>收入</h4>
-                        </div>
-                        <div class="box-money">
-                            <!--<p>+</p>-->
-                            <input value="+ 8888" type="text" disabled="disabled">
-                        </div>
-                        <div class="box-time">
-                            <p>2015/7/22</p>
-                        </div>
-                        <div class="box-change">
-                            <div class="box-change-write">
-                                <i class="iconfont">&#xe691;</i>
-                            </div>
-                            <div class="box-change-del">
-                                <i class="iconfont">&#xe675;</i>
-                            </div>
-                        </div>
-                    </div>
-            </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+        <table>
+            <tr>
+                <td class="desc">账目类型</td>
+                <td>
+                    <select id="account-type">
+                        <option>收入</option>
+                        <option>衣服</option>
+                        <option>饮食</option>
+                        <option>住宿</option>
+                        <option>交通</option>
+                        <option>购物</option>
+                        <option>其他</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="desc">账目金额</td>
+                <td><input type="text" id="account-money"></td>
+            </tr>
+            <tr>
+                <td class="desc">账目描述</td>
+                <td><input type="text" id="account-desc"></td>
+            </tr>
+
+            <tr>
+                <td><button id="account-add" onclick="saveStorage()">添加</button></td>
+            </tr>
+    
+           
+        </table>
     </div>
 </main>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>

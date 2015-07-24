@@ -18,15 +18,19 @@
 
 		strData = JSON.stringify( data ); // 将对象转换为 json 格式字符串
 		localStorage.setItem( data.accountTime , strData ); // 账目时间戳做 key
+ 
+		alert('添加账目成功！返回账目列表！');
+		window.location = 'index.html';
 
 		//localStorage.clear();
-		var content = "<ul><li>"+ data.accountType +"</li><li>"+ data.accountMoney +"</li><li>"+ data.accountDesc +"</li><li>"+ data.accountTime +"</li></ul>";
+		/* 因添加账目后 不需要在本页面插入数据,所以注释 */
+		// var content = "<ul><li>"+ data.accountType +"</li><li>"+ data.accountMoney +"</li><li>"+ data.accountDesc +"</li><li>"+ data.accountTime +"</li></ul>";
 		
-		var element = document.createElement("div");
-		element.innerHTML = content; //  创建一个div元素节点, 并把content内容放进此节点内
+		// var element = document.createElement("div");
+		// element.innerHTML = content; //  创建一个div元素节点, 并把content内容放进此节点内
 
-		var firstChild = accountList.getElementsByTagName('div')[0];
-		accountList.insertBefore( element , firstChild); // insert到第一个div节点之前
+		// var firstChild = accountList.getElementsByTagName('div')[0];
+		// accountList.insertBefore( element , firstChild); // insert到第一个div节点之前
 
 		
 	}
@@ -36,6 +40,13 @@
 		for( k in localStorage ){
 
 			var dataObj = JSON.parse( localStorage.getItem(k) ); // 循环地把每一条字符串数据解析回JSON对象
+
+			var date = new Date( dataObj.accountTime ); // 把时间戳传入
+			var mouth = date.getMonth()+1; // 月份
+		
+			var accountDate = date.getFullYear() +'/'+ mouth +'/'+ date.getDate(); // 日期
+			console.log(accountDate);
+
 			var content = "<ul><li>"+ dataObj.accountType +"</li><li>"+ dataObj.accountMoney +"</li><li>"+ dataObj.accountDesc +"</li><li>"+ dataObj.accountTime +"</li></ul>";
 		
 			var element = document.createElement("div");
@@ -48,3 +59,9 @@
 	}
 
 	findAllStorage();
+
+
+	function getDate( timestamp ){ 
+		var timestamp=new Date(parseInt(timestamp) * 1000).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ") 
+		return timestamp; 
+	} 
