@@ -214,9 +214,9 @@
         }
         var get={
             byClass:function(aclass,parent){
-//                if(document.getElementsByClassName){
-//                    return document.getElementsByClassName(aclass)
-//                }
+                if(document.getElementsByClassName){
+                    return document.getElementsByClassName(aclass)
+                }
                 var Oparent=parent?document.getElementById(parent):document,
                         eles=[],
                         elemts=Oparent.getElementsByTagName("*");
@@ -229,7 +229,7 @@
             }
         };
         window.onload=function(){
-            var aLi=get.byClass("box-con")[0];
+            var aLi=get.byClass("box-con");
             var theBox=get.byClass("theBox")[0];
             var startTouch,moveTouch,aboveX=0;
 
@@ -239,9 +239,9 @@
                     var touch = e.changedTouches[0];
                     startTouch={
                         x:touch.pageX||touch.clientX
-                    }
-                    addEvent(aLi,'touchmove',event.touchMove)
-                    addEvent(aLi,'touchend',event.touchEnd)
+                    };
+                    addEvent(this,'touchmove',event.touchMove)
+                    addEvent(this,'touchend',event.touchEnd)
                 },
                 touchMove:function(e){
                     e.preventDefault();
@@ -252,24 +252,25 @@
                     moveTouch={
                         x:touch.pageX||touch.clientX
                     };
-                    aLi.style.left=aboveX+(moveTouch.x - startTouch.x)+"px";
-                    console.log(aLi.style.left)
+                    this.style.left=aboveX+(moveTouch.x - startTouch.x)+"px";
                 },
                 touchEnd:function(){
-                    aboveX=parseInt(aLi.style.left)
+                    aboveX=parseInt(this.style.left);
                     if(aboveX > 0){
-                        $(aLi).animate({left:0},200)
+                        $(this).animate({left:0},200);
                         aboveX=0
                     }
-                    if(aboveX < 0 && aboveX < -(theBox.offsetWidth - aLi.offsetWidth)){
-                        $(aLi).animate({left:-(theBox.offsetWidth - aLi.offsetWidth)},200)
-                        aboveX=-(theBox.offsetWidth - aLi.offsetWidth)
+                    if(aboveX < 0 && aboveX < -(theBox.offsetWidth - this.offsetWidth)){
+                        $(this).animate({left:-(theBox.offsetWidth - this.offsetWidth)},200);
+                        aboveX=-(theBox.offsetWidth - this.offsetWidth)
                     }
-                    removeEvent(aLi,'touchmove',event.touchMove);
-                    removeEvent(aLi,'touchmove',event.touchEnd)
+                    removeEvent(this,'touchmove',event.touchMove);
+                    removeEvent(this,'touchmove',event.touchEnd)
                 }
+            };
+            for(var i=0;i<aLi.length;i++){
+                addEvent(aLi[i],'touchstart',event.touchStart)
             }
-            addEvent(aLi,'touchstart',event.touchStart)
         }
     </script>
 </head>
