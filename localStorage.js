@@ -47,13 +47,20 @@
 			var accountDate = date.getFullYear() +'/'+ mouth +'/'+ date.getDate(); // 日期
 			console.log(accountDate);
 
-			var content = "<ul><li>"+ dataObj.accountType +"</li><li>"+ dataObj.accountMoney +"</li><li>"+ dataObj.accountDesc +"</li><li>"+ dataObj.accountTime +"</li></ul>";
-		
-			var element = document.createElement("div");
+			//var content = "<ul><li>"+ dataObj.accountType +"</li><li>"+ dataObj.accountMoney +"</li><li>"+ dataObj.accountDesc +"</li><li>"+ dataObj.accountTime +"</li></ul>";
+
+			var content = "<div class='theBox'><div class='box-icon'><i class='iconfont'>&#xe61f;</i></div><div class='box-text'><!-- type --><h4>"+ dataObj.accountType +"</h4></div><div class='box-money'><!--<p>+</p>--><!-- 金额 --><input value='"+ dataObj.accountMoney +"' type='text' disabled='disabled'></div><div class='box-time'><p>"+ accountDate +"</p></div><div class='box-change'><div class='box-change-write'><i class='iconfont'>&#xe691;</i></div><div class='box-change-del'><i class='iconfont'>&#xe675;</i></div></div></div>";
+
+
+
+
+			var element = document.createElement("li");
 			element.innerHTML = content;
 
-			var firstChild = accountList.getElementsByTagName('div')[0];
-			accountList.insertBefore( element , firstChild); // insert到第一个div节点之前
+			var accountList_li = accountList.getElementsByTagName('li');
+			console.log(accountList_li);
+
+			accountList.insertBefore( element ,accountList_li[0] ); // insert到第一个div节点之前
 		}
 
 	}
