@@ -55,6 +55,7 @@
 
 
 			var element = document.createElement("li");
+			element.className = 'box-con';
 			element.innerHTML = content;
 
 			var accountList_li = accountList.getElementsByTagName('li');
