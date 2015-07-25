@@ -45,7 +45,7 @@
             background: none;
             outline: none;
         }
-        header{
+        #index-header{
             background: rgb(142,212,152);
             width: 100%;
             height: 100px;
@@ -54,33 +54,33 @@
             left: 0;
             display: flex;
             z-index: 888;
+            text-align: center;
         }
         .head-nav-left,.head-wirte{
             flex-grow: 1;
         }
         .head-text{
-            flex-grow: 10;
+            flex-grow: 6;
             color: white;
         }
         .head-text h4{
             font-size: 4.5rem;
         }
-        header > div{
-            text-align: center;
-            margin: auto;
+        #index-header > .head-nav-left i,.head-wirte i, .head-text h4{
+            line-height: 100px;
         }
         .head-nav-left i,.head-wirte i{
             color: white;
             font-size: 6rem;
         }
-        main{
+        .index-main{
             width: 100%;
             position: absolute;
             top: 100px;
             overflow-y: scroll;
             -webkit-overflow-scrolling: touch;
         }
-        main #content{
+        .index-main #content{
             width: 95%;
             height: 1000px;
             float: right;
@@ -101,7 +101,7 @@
             flex-grow: 1;
             display: flex;
             text-align: left;
-            border-top: 2px dashed #8e8e8e;
+            /*border-top: 2px dashed #8e8e8e;*/
             /*overflow: hidden;*/
             position: relative;
             left: 0;
@@ -116,7 +116,7 @@
             height: 100%;
             left: 0;
             top: 0;
-            /*border-bottom: 2px dashed #8e8e8e;*/
+            border-bottom: 2px dashed #8e8e8e;
             /*background: red;*/
             display: flex;
         }
@@ -268,14 +268,19 @@
                     removeEvent(this,'touchmove',event.touchEnd)
                 }
             };
-            for(var i=0;i<aLi.length;i++){
-                addEvent(aLi[i],'touchstart',event.touchStart)
+            var modlie= 'ontouchstart' in window
+            if(modlie){
+                for(var i=0;i<aLi.length;i++){
+                    addEvent(aLi[i],'touchstart',event.touchStart)
+                }
+            }else{
+                alert("请在手机或平板上登录网站")
             }
         }
     </script>
 </head>
 <body>
-<header>
+<header id="index-header">
     <div class="head-nav-left">
         <i class="iconfont">&#xe656;</i>
     </div>
@@ -283,10 +288,10 @@
         <h4>记账本</h4>
     </div>
     <div class="head-wirte">
-        <i class="iconfont">&#xe627;</i>
+        <i class="iconfont">&#xe892;</i>
     </div>
 </header>
-<main>
+<main class="index-main">
     <div id="content">
         <ul>
             <li class="box-con">
@@ -306,7 +311,7 @@
                         </div>
                         <div class="box-change">
                             <div class="box-change-write">
-                                <i class="iconfont">&#xe691;</i>
+                                <i class="iconfont">&#xe689;</i>
                             </div>
                             <div class="box-change-del">
                                 <i class="iconfont">&#xe675;</i>
@@ -314,12 +319,31 @@
                         </div>
                     </div>
             </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li class="box-con">
+                <div class="theBox">
+                    <div class="box-icon">
+                        <i class="iconfont">&#xe61f;</i>
+                    </div>
+                    <div class="box-text">
+                        <h4>收入</h4>
+                    </div>
+                    <div class="box-money">
+                        <!--<p>+</p>-->
+                        <input value="+ 8888" type="text" disabled="disabled">
+                    </div>
+                    <div class="box-time">
+                        <p>2015/7/22</p>
+                    </div>
+                    <div class="box-change">
+                        <div class="box-change-write">
+                            <i class="iconfont">&#xe689;</i>
+                        </div>
+                        <div class="box-change-del">
+                            <i class="iconfont">&#xe675;</i>
+                        </div>
+                    </div>
+                </div>
+            </li>
         </ul>
     </div>
 </main>
