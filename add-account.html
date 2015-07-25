@@ -1,7 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
+
     <meta charset="UTF-8">
+    <title>Document</title>
     <meta name = "viewport" content = "width = device-width">
     <meta name = "viewport" content = "initial-scale = 1.0">
     <meta name = "viewport" content = "height = device-height">
@@ -9,363 +11,135 @@
     <meta name = "viewport" content = "user-scalable=no">
     <meta name = "viewport" content = "user-scalable=no">
     <meta content="telephone=no" name="format-detection" />
-    <title>Document</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-        *,*::after,*::before{
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-        html{
-            font-size: 62.5%;
-        }
-        body{
-            font-size: 1.4rem;
-        }
-        @font-face {font-family: 'iconfont';
-            src: url('fonts/iconfont.eot'); /* IE9*/
-            src: url('fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-            url('fonts/iconfont.woff') format('woff'), /* chrome、firefox */
-            url('fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-            url('fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
-        }
-        .iconfont{
-            font-family:"iconfont" !important;
-            font-size:16px;font-style:normal;
-            -webkit-font-smoothing: antialiased;
-            -webkit-text-stroke-width: 0.2px;
-            -moz-osx-font-smoothing: grayscale;}
-        input{
-            border: none;
-            background: none;
-            outline: none;
-        }
-        header{
-            background: rgb(110,120,119);
-            width: 100%;
-            height: 100px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            display: flex;
-            z-index: 888;
-        }
-        .head-nav-left,.head-wirte{
-            flex-grow: 1;
-        }
-        .head-text{
-            flex-grow: 10;
-            color: white;
-        }
-        .head-text h4{
-            font-size: 4.5rem;
-        }
-        header > div{
-            text-align: center;
-            margin: auto;
-        }
-        .head-nav-left i,.head-wirte i{
-            color: white;
-            font-size: 6rem;
-        }
-        main{
-            width: 100%;
-            position: absolute;
-            top: 100px;
-            overflow-y: scroll;
-            -webkit-overflow-scrolling: touch;
-        }
-        main #content{
-            width: 95%;
-            height: 1000px;
-            float: right;
-            /*overflow: hidden;*/
-            /*background: cornflowerblue;*/
-        }
-        #content ul {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            overflow: hidden;
-        }
-        #content ul li{
-            width: 100%;
-            height: 100%;
-            flex-grow: 1;
-            display: flex;
-            text-align: left;
-            border-top: 2px dashed #8e8e8e;
-            /*overflow: hidden;*/
-            position: relative;
-            left: 0;
-            top: 0;
-        }
-        #content ul li:nth-child(1){
-            border: none;
-        }
-        .theBox{
-            position: absolute;
-            width: 130%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            /*border-bottom: 2px dashed #8e8e8e;*/
-            /*background: red;*/
-            display: flex;
-        }
-        .box-icon{
-            min-width: 100px;
-            flex-grow: .3;
-            margin: auto;
-        }
-        .box-text{
-            min-width: 100px;
-            margin: auto;
-        }
-        .box-text h4{
-            font-size: 5rem;
-            color: #8e8e8e;
-            font-style: normal;
-            font-weight: normal;
-        }
-        .box-money{
-            flex-grow: 2;
-            min-width: 200px;
-            margin: auto;
-            /*text-align: center;*/
-        }
-        .box-money input{
-           float: left;
-            color:  rgb(142,212,152);
-            font-size:5rem;
-            padding-left: 15%;
-        }
-        .box-time{
-            min-width: 300px;
-            flex-grow: 4;
-            /*background: red;*/
-        }
-        .box-time p{
-            font-size: 2rem;
-            padding-top: 20px;
-            color: #8e8e8e;
-            text-align: left;
-        }
-        .box-change{
-            width: 20%;
-            /*position: absolute;*/
-            position: relative;
-            /*left: 100%;*/
-            /*top: 0;*/
-            /*bottom: 0;*/
-            /*right: 0;*/
-            display: flex;
-            color: white;
-            background:rgb(215,76,61);
-        }
-        .box-change-write,.box-change-del{
-            text-align: center;
-            width: 50%;
-            margin: auto;
-        }
-        .box-change-write i,.box-change-del i{
-            font-size: 7rem;
-        }
-        .box-icon i{
-            color:  rgb(142,212,152);
-            font-size: 7rem;
-        }
-        /*.a{*/
-            /*flex: 1;*/
-            /*display: flex;*/
-        /*}*/
-        /*.b{*/
-           /*width: 20%;*/
-            /*flex: 1;*/
-        /*}*/
-        /*.box-con>div{*/
-            /*background: coral;*/
-            /*float: left;*/
-        /*}*/
-        /*.box-con>div:nth-child(2n){*/
-            /*background: cornflowerblue;*/
-        /*}*/
-        
-        #content table{
-            margin:0 auto;
-            margin-right:150px;
-        }
-    
-        #content table tr{
-            line-height: 130px;
-        }
 
-        #content table tr .desc{
-            text-indent: -200px;
-          
-        }
+    <link type="text/css" rel="stylesheet" href="fonts/demo.css">
+    <link type="text/css" rel="stylesheet" href="fonts/iconfont.css">
+    <link type="text/css" rel="stylesheet" href="style/add-account.css">
 
-        #content table tr td,
-        #content table tr td select,
-        #content table tr td option
-        {
-            font-size:5rem;
-        }
-    
-        /* 多选框 */
-        #content table tr td #account-type{
-            border:4px solid #ccc;
-            border-radius: 10px;
-        }
-
-        /* 金额框  */
-        #content table tr td #account-money{
-            border:4px solid #ccc;
-            border-radius: 10px;
-            height: 80px;
-            width: 150px;
-            display: block;
-            margin-top:-12px;
-            font-size:5rem;
-            text-indent: 10px;
-        }
-        
-        /* 描述框 */
-        #content table tr td #account-desc{
-            border:4px solid #ccc;
-            border-radius: 10px;
-            height: 80px;
-            width: 650px;
-            display: block;
-            margin-top:0px;
-            font-size:5rem;
-            text-indent: 10px;
-        }
-        
-        /* 添加账目按钮 */
-        #content table tr td #account-add{
-            display: block;
-            position: absolute;
-            width: 500px;height: 100px;
-            font-size: 5rem;
-            border-radius: 10px;
-            box-shadow: 0 0 0 0;
-        }
-
-        
-
-        
-        
-
-    </style>
-    <script>
-        function getStyle(obj,attr){
-            return obj.currentStyle[attr]?obj.currentStyle[attr]:getComputedStyle(obj,false)[attr]
-        }
-        function addEvent(obj,type,fn){
-            if(document.addEventListener){
-                obj.addEventListener(type,fn,false)
-            }
-        }
-        function removeEvent(obj,type,fn){
-            if(document.removeEventListener){
-                obj.removeEventListener(type,fn,false)
-            }
-        }
-        window.onload=function(){
-            var aLi=document.querySelector(".box-con");
-            var Box=document.querySelector(".theBox");
-            var box_change = document.querySelector(".box-change");
-            var theWidth=Box.offsetWidth + box_change.offsetWidth;
-            var start="ontouchstart" in window?"touchstart":"click";
-            var startX,moveX,aboveX;
-            console.log(aLi[0])
-            function touchStart(event){
-                var e=event||window.event;
-                var touch= e.changedTouches[0];
-                startX=touch.pageX||touch.clientX;
-            }
-            function touchMove(event){
-                event.preventDefault();
-                var e=event||window.event;
-                var touch= e.changedTouches[0];
-                var myclient=touch.pageX||touch.clientX;
-                moveX=myclient - startX;
-                aLi.style.left=aboveX + moveX +"px"
-            }
-            function touchend(event){
-//                event.preventDefault();
-                aboveX=parseInt(aLi.style.left)
-                if(moveX > 0){
-                    $(aLi).animate({left:0},200);
-                    aboveX=0
-                }
-                if(moveX < 0 && aboveX < -(Box.offsetWidth - aLi.offsetWidth)){
-                    $(aLi).animate({left:-(Box.offsetWidth - aLi.offsetWidth)},200);
-                    aboveX=-(Box.offsetWidth - aLi.offsetWidth)
-                }
-            }
-            aLi.addEventListener('touchstart',touchStart,false);
-            aLi.addEventListener('touchmove',touchMove,false);
-            aLi.addEventListener('touchend',touchend,false)
-        }
-    </script>
 </head>
 <body>
-<header>
-
-    <div class="head-nav-left">
-        <i class="iconfont" onclick="window.location = 'index.html'">&#xe656;</i>
+<header id="add-header">
+    <div class="add-left-icon">
+        <i class="iconfont">&#xe6cb;</i>
     </div>
-    <div class="head-text">
-        <h4>记录账目</h4>
+    <div class="add-text">
+        <h4>记一笔</h4>
     </div>
-
+    <div class="add-right-issus">
+        <a onclick="addAccount()">发布</a>
+    </div>
 </header>
-<main>
-    <div id="content">
-        <table>
-            <tr>
-                <td class="desc">账目类型</td>
-                <td>
-                    <select id="account-type">
-                        <option>收入</option>
-                        <option>衣服</option>
-                        <option>饮食</option>
-                        <option>住宿</option>
-                        <option>交通</option>
-                        <option>购物</option>
-                        <option>其他</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td class="desc">账目金额</td>
-                <td><input type="text" id="account-money"></td>
-            </tr>
-            <tr>
-                <td class="desc">账目描述</td>
-                <td><input type="text" id="account-desc"></td>
-            </tr>
-
-            <tr>
-                <td><button id="account-add" onclick="saveStorage()">添加</button></td>
-            </tr>
-    
-           
-        </table>
+<main id="add-main">
+    <div class="add-content" id="add-content">
+        <ul>
+            <li class="add-box">
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(142,212,152)" colorAttr="142,212,152" iconAttr="&#xe61f;">
+                    &#xe61f;</i>
+                    <p>收入</p>
+                </div>
+            </li>
+            <li class="add-box">
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(243,159,97)" colorAttr="243,159,97" iconAttr="&#xe605;">
+                    &#xe605;</i>
+                    <p>衣服</p>
+                </div>
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(254,137,136)" colorAttr="254,137,136" iconAttr="&#xe669;">
+                    &#xe669;</i>
+                    <p>餐饮</p>
+                </div>
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(198,179,156)" colorAttr="198,179,156" iconAttr="&#xe608;">
+                    &#xe608;</i>
+                    <p>网购</p>
+                </div>
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(111,178,222)" colorAttr="111,178,222" iconAttr="&#xe88d;">
+                    &#xe88d;</i>
+                    <p>交通</p>
+                </div>
+            </li>
+            <li class="add-box">
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(218,90,76)" colorAttr="218,90,76" iconAttr="&#xe62c;">
+                    &#xe62c;</i>
+                    <p>话费</p>
+                </div>
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(253,196,3)" colorAttr="253,196,3" iconAttr="&#xe6b3;">
+                    &#xe6b3;</i>
+                    <p>其余</p>
+                </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </main>
 
-<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="js/createAccount.js"></script>
+<!-- ----------------------------------------------------------------------------------------------------------- -->
+
+
+<!-- 存储第二次计算或更多次计算的结果 -->
+<input id="textfield4" type="text" value="0" size="100" maxlength="100"  readonly=""/>
+
+
+<table id="btn_div"> 
+  	
+  	<tr>
+		<div class="show-area">
+			<div class="show-account-type">
+				<div class="a selected-type" id="selected-type">
+                    <i class="iconfont" style="color: rgb(243,159,97)"></i>
+                    <p></p>
+                </div>
+			</div>
+			<div class="show-account-number">
+				<input name="textfield1" type="text" id="textfield1" value="" size="25" maxlength="100" readonly="" />
+      			<span id="fuhao" class="note"> </span>
+      			<input name="textfield2" type="text" id="textfield2" size="25" maxlength="100" readonly="" />
+      			<span id="eq" class="eq"> </span>
+      			<input name="textfield3" type="text" id="textfield3" size="25" maxlength="100" readonly="" />
+			</div>
+				
+		</div>
+  	</tr>
+
+	<tr>
+		<td><input type="button" name="Submit2" value="1" id="one" /></td>
+		<td><input type="button" name="Submit3" value="2" id="two" /></td>
+		<td><input type="button" name="Submit4" value="3" id="three"/></td>
+		<td><input type="button" name="Submit19" value="Reset" id="reset"/></td>
+	</tr>
+
+	<tr>
+		<td><input type="button" name="Submit5" value="4" id="four"/></td>
+		<td><input type="button" name="Submit6" value="5"id="five" /></td>
+		<td><input type="button" name="Submit7" value="6" id="six"/></td>
+		<td><input type="button" name="Submit11" value="+" id="add"/></td>
+	</tr>
+
+	<tr>
+
+		<td><input type="button" name="Submit8" value="7" id="seven"/></td>
+		<td><input type="button" name="Submit9" value="8" id="eight"/></td>
+		<td><input type="button" name="Submit10" value="9" id="nine"/></td>
+		<td><input type="button" name="Submit12" value="-" id="sub"/></td>
+	</tr>
+
+	<tr>
+		<td><input type="button" name="Submit20" value="C" id="del" /></td>
+		<td><input type="button" name="Submit" value="0" id="zero" /></td>
+		<td><input type="button" name="Submit18" value="." id="dot" /></td>
+		<td><input type="button" name="Submit16" value="=" id="deng"/></td>
+	</tr>
+
+</table>
+
+<script src="js/add-account/calculator.js"></script>
+<script src="js/add-account/addType.js"></script>
+<script src="js/add-account/addAccount.js"></script>
 
 </body>
 </html>
