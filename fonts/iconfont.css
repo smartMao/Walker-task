@@ -15,14 +15,25 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+<<<<<<< HEAD
 .icon-07daohang:before { content: "\e656"; }
 .icon-bi:before { content: "\e627"; }
+=======
+.icon-cha:before { content: "\e6cb"; }
+.icon-07daohang:before { content: "\e656"; }
+.icon-xiao47:before { content: "\e892"; }
+.icon-bi:before { content: "\e689"; }
+>>>>>>> origin/myPage
 .icon-qian:before { content: "\e61f"; }
 .icon-icon01:before { content: "\e605"; }
 .icon-chihuoying:before { content: "\e669"; }
 .icon-feiji:before { content: "\e88d"; }
 .icon-gouwu:before { content: "\e608"; }
 .icon-chonghuafei:before { content: "\e62c"; }
+<<<<<<< HEAD
 .icon-del:before { content: "\e616"; }
 .icon-lajitong:before { content: "\e675"; }
 .icon-bi1:before { content: "\e691"; }
+=======
+.icon-lajitong:before { content: "\e675"; }
+>>>>>>> origin/myPage
