@@ -107,9 +107,20 @@
 <script src="jq/jquery-2.1.4.min.js"></script>
 <script>
     var every_icon=document.getElementsByClassName("add-box");
-    var counter=document.getElementById("counter")
-    console.log(counter)
+    var counter=document.getElementById("counter");
+    var add_left_icon=document.getElementsByClassName("add-left-icon")[0];
+    /*跳转回首页 开始*/
+    var location_to_index={
+        touchStart:function(e){
+            e.preventDefault();
+            $(this).toggleClass("change-icoColor-backToIndex")
+            location.href="index.html"
+        }
+    };
+    add_left_icon.addEventListener("touchstart",location_to_index.touchStart,false);
+    /*跳转回首页 结束*/
 
+    /*计算器过渡动画 开始*/
     var sliders={
         touchStart:function(e){
             e.preventDefault();
@@ -119,6 +130,7 @@
     for(var i=0;i<every_icon.length;i++){
         every_icon[i].addEventListener("touchstart",sliders.touchStart,false)
     }
+    /*计算器过渡动画 结束*/
 </script>
 </body>
 </html>

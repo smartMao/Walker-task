@@ -29,6 +29,9 @@ body{
 .add-left-icon,.add-right-issus{
     flex: 1.5;
 }
+.change-icoColor-backToIndex{
+    background: #bebaba;
+}
 .add-text{
     flex: 6;
 }

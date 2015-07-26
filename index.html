@@ -87,7 +87,48 @@
         </ul>
     </div>
 </main>
-<script src="js/main.js"></script>
+<script charset="gb2312"  src="js/main.js"></script>
 <script src="jq/jquery-2.1.4.min.js"></script>
+
+<script>
+
+    function addEvent(obj,type,fn){
+        if(document.addEventListener){
+            obj.addEventListener(type,fn,false)
+        }
+    }
+    function removeEvent(obj,type,fn){
+        if(document.removeEventListener){
+            obj.removeEventListener(type,fn,false)
+        }
+    }
+    /* 删除节点操作 开始 */
+    var del=document.getElementsByClassName("box-change-del");
+
+    var del_thisLi={
+        touchStart:function(e){
+            e.preventDefault();
+            if(this.parentNode.parentNode.parentNode.remove){
+                if(confirm("确定要删除吗")){//删除确认
+                    this.parentNode.parentNode.parentNode.remove();
+                    this.addEventListener('touchend',del_thisLi.touchEnd,false);
+                    e.stopPropagation()
+                }else{
+                    return false
+                }
+            }
+            e.stopPropagation()
+        },
+        touchEnd:function(e){
+            e.preventDefault();
+           removeEvent(this,'touchstart',del_thisLi.touchStart)
+            e.stopPropagation()
+        }
+    };
+    for(var i=0;i<del.length;i++){
+        del[i].addEventListener('touchstart',del_thisLi.touchStart,false)
+    }
+    /* 删除节点操作 结束 */
+</script>
 </body>
 </html>

@@ -39,19 +39,38 @@ window.onload=function(){
     var startTouch,moveTouch,aboveX=0;
 
     /* 导航动画 开始 */
+    var anima=true
     var slider={
         touchStart:function(e){
             e.preventDefault();
-            $(nav_list).slideToggle(500);
-            if(mainTOP.offsetTop > 100){
-                $(mainTOP).animate({top:mainTOP.offsetTop - 100 +"px"},500)
-            }else{
-                $(mainTOP).animate({top:mainTOP.offsetTop + 100 +"px"},500)
+            if(!anima){
+                return
             }
+            $(this).toggleClass("change_wirte_color");
+            $(nav_list).slideToggle(500,function(){
+                if(mainTOP.offsetTop > 100){
+                    $(mainTOP).animate({top:mainTOP.offsetTop - 100 +"px"},500)
+
+                }else{
+                    $(mainTOP).animate({top:mainTOP.offsetTop + 100 +"px"},500)
+                }
+            });
         }
     };
     addEvent(head_left,"touchstart",slider.touchStart);
     /* 导航动画 结束 */
+
+    /* 跳转到添加页面 开始 */
+    var location_to_addpage={
+        touchStart:function(e){
+            e.preventDefault();
+            $(this).toggleClass("change_wirte_color")
+            location.href="addPage.html"
+        }
+    };
+    var add_one_Li=document.getElementsByClassName("head-wirte")[0];
+    addEvent(add_one_Li,'touchstart',location_to_addpage.touchStart)
+    /* 跳转到添加页面 结束 */
 
     /* 左右滑动效果 开始 */
     var event={
@@ -102,7 +121,7 @@ window.onload=function(){
             addEvent(aLi[i],'touchstart',event.touchStart)
         }
     }else{
-        alert("请在手机或平板上登录网站")
+        alert('请在手机端登录网站')
     }
 
     /* 左右滑动效果 结束 */
