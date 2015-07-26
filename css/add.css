@@ -126,6 +126,7 @@ body{
     flex: 1;
     display: flex;
     min-height: 164px;
+    background: rgb(238,238,238);
 }
 .show_icon{
     flex: 6;
