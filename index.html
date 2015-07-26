@@ -37,71 +37,7 @@
 <main>
     <div id="content">
         <ul id="account-list">
-           <!--  <li class="box-con">
-                <div class="theBox">
-                        <div class="box-icon">
-                            <i class="iconfont">&#xe61f;</i>
-                        </div>
-                        <div class="box-text">
-                            
-                            <h4>收入</h4>
-                        </div>
-                        <div class="box-money">
-                            
-=======
-    <link type="text/css" rel="stylesheet" href="css/main.css">
-    <link type="text/css" rel="stylesheet" href="fonts/demo.css">
-    <link type="text/css" rel="stylesheet" href="fonts/iconfont.css">
-    <title>每日记账</title>
-</head>
-<body>
-<header id="index-header">
-    <div class="nav-box">
-        <ul class="nav-list">
-        <li><a href="#">账目列表</a></li>
-        <li><a href="#">账目统计</a></li>
-        <li><a href="#">账目图表</a></li>
-        </ul>
-        <div class="head-nav-left">
-            <i class="iconfont">&#xe656;</i>
-        </div>
-        <div class="head-text">
-            <h4>记账本</h4>
-        </div>
-        <div class="head-wirte">
-            <i class="iconfont">&#xe892;</i>
-        </div>
-    </div>
-</header>
-<main class="index-main">
-    <div id="content">
-        <ul>
-            <li class="box-con">
-                <div class="theBox">
-                        <div class="box-icon">
-                            <i class="iconfont ">&#xe61f;</i>
-                        </div>
-                        <div class="box-text">
-                            <h4>收入</h4>
-                        </div>
-                        <div class="box-money">
->>>>>>> origin/addPage2
-                            <input value="+ 8888" type="text" disabled="disabled">
-                        </div>
-                        <div class="box-time">
-                            <p>2015/7/22</p>
-                        </div>
-                        <div class="box-change">
-                            <div class="box-change-write">
-                                <i class="iconfont">&#xe691;</i>
-                            </div>
-                            <div class="box-change-del">
-                                <i class="iconfont">&#xe675;</i>
-                            </div>
-                        </div>
-<<<<<<< HEAD
-                </div>
-            </li> -->
+          
             <li></li>
             <li></li>
             <li></li>
@@ -116,80 +52,9 @@
 <script src="js/index/showAccountList.js"></script><!-- 展示LocalStorage数据 -->
 <script type="text/javascript" src="js/index/indexTouchAnim.js"></script><!-- 滑动效果 -->
 
-
-=======
-                    </div>
-            </li>
-            <li class="box-con">
-                <div class="theBox">
-                    <div class="box-icon">
-                        <i class="iconfont">&#xe61f;</i>
-                    </div>
-                    <div class="box-text">
-                        <h4>收入</h4>
-                    </div>
-                    <div class="box-money">
-                        <input value="+ 8888" type="text" disabled="disabled">
-                    </div>
-                    <div class="box-time">
-                        <p>2015/7/22</p>
-                    </div>
-                    <div class="box-change">
-                        <div class="box-change-write">
-                            <i class="iconfont">&#xe691;</i>
-                        </div>
-                        <div class="box-change-del">
-                            <i class="iconfont">&#xe675;</i>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-</main>
 <script charset="gb2312"  src="js/main.js"></script>
 <script src="jq/jquery-2.1.4.min.js"></script>
 
-<script>
 
-    function addEvent(obj,type,fn){
-        if(document.addEventListener){
-            obj.addEventListener(type,fn,false)
-        }
-    }
-    function removeEvent(obj,type,fn){
-        if(document.removeEventListener){
-            obj.removeEventListener(type,fn,false)
-        }
-    }
-    /* 删除节点操作 开始 */
-    var del=document.getElementsByClassName("box-change-del");
-
-    var del_thisLi={
-        touchStart:function(e){
-            e.preventDefault();
-            if(this.parentNode.parentNode.parentNode.remove){
-                if(confirm("确定要删除吗")){//删除确认
-                    this.parentNode.parentNode.parentNode.remove();
-                    this.addEventListener('touchend',del_thisLi.touchEnd,false);
-                    e.stopPropagation()
-                }else{
-                    return false
-                }
-            }
-            e.stopPropagation()
-        },
-        touchEnd:function(e){
-            e.preventDefault();
-           removeEvent(this,'touchstart',del_thisLi.touchStart)
-            e.stopPropagation()
-        }
-    };
-    for(var i=0;i<del.length;i++){
-        del[i].addEventListener('touchstart',del_thisLi.touchStart,false)
-    }
-    /* 删除节点操作 结束 */
-</script>
->>>>>>> origin/addPage2
 </body>
 </html>
