@@ -12,6 +12,7 @@
     <meta content="telephone=no" name="format-detection" />
     <link type="text/css" rel="stylesheet" href="fonts/demo.css">
     <link type="text/css" rel="stylesheet" href="fonts/iconfont.css">
+    <script src="jq/jquery-2.1.4.min.js"></script>
     <style>
         *{
             padding: 0;
@@ -103,11 +104,13 @@
             width: auto;
             position: relative;
             text-align: center;
-            margin-right: 80px;
+            /*padding:0 50px 0 0;*/
+            /*margin-right: 80px;*/
         }
         .a >  i{
             color:rgb(142,212,152) ;
             font-size: 8rem;
+            padding: 40px;
         }
         .a > p{
             font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
@@ -129,6 +132,7 @@
             background: rgb(238,238,238);
             display: flex;
             flex-direction: column;
+            /*visibility: hidden;*/
         }
         .show_something{
             width: 100%;
@@ -145,6 +149,7 @@
         .show_icon >i{
             font-size: 8rem;
             margin-left: 5%;
+            padding-left: 50px;
         }
         .show_icon>p{
            /*background: gold;*/
@@ -289,5 +294,20 @@
         </div>
     </div>
 </main>
+<script>
+    var every_icon=document.getElementsByClassName("add-box");
+    var counter=document.getElementById("counter")
+    console.log(counter)
+
+    var sliders={
+        touchStart:function(e){
+            e.preventDefault();
+            $(counter).fadeToggle(500);
+        }
+    };
+    for(var i=0;i<every_icon.length;i++){
+        every_icon[i].addEventListener("touchstart",sliders.touchStart,false)
+    }
+</script>
 </body>
 </html>
