@@ -14,6 +14,7 @@ html{
 body{
     font-size: 1.4rem;
 }
+
 @font-face {font-family: 'iconfont';
     src: url('../fonts/fonts2/iconfont.eot'); /* IE9*/
     src: url('../fonts/fonts2/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -22,13 +23,6 @@ body{
     url('../fonts/fonts2/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-@font-face {font-family: 'iconfont';
-    src: url('../fonts/iconfont.eot'); /* IE9*/
-    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/iconfont.woff') format('woff'), /* chrome、firefox */
-    url('../fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
-}
 
 #add-header{
     width: 100%;
@@ -142,94 +136,135 @@ body{
 }
 
 /* 显示账目类型 账目金额的区域 */
-.show-area{
-	width: 95%;
-	height: 250px;
-	background: #EAEAEA;
-	position: relative;
-	float: right;
-	margin-top:-50px;
-}
-
-#btn_div{
-	float: right;
-	width: 95%;
-}
-
-.show-account-type{
-	display: block;
-	width: 100%;
-	height: 100%;
-	float: left;
-	background: #EAEAEA
-    position: relative;
-}
-
-.show-account-type .selected-type{
-    position: absolute;
-    top:20%;left:30%;
-    width: 200px;
-    height: 140px;
-}
-
-.show-account-type .selected-type p{
-    text-indent: 10px;
-}
-
-.show-account-number{
-	width: 300px;
-	height: 250px;
-	background: #EAEAEA;
-	position: absolute;
-	right: 0px;
-}
 
 #textfield1,
 #textfield2,
 #textfield3{
 
-	height: 60px;width: 100%;
-	font-size: 50px;
+	height: 60px;width: 250px;
 	line-height: 60px;
 	position: absolute;
-	background: #EAEAEA;
+    background:  rgb(238,238,238);
+    color: rgb(129,129,129);
+    font-size: 5rem;
+    border: none;
+    top:35%;
+
 }
 
 #textfield1{
-	left: 0px;
-	border:none;
+	left: 30%;
 }
 
 #textfield2{
-	left: 0px;
-	top:95px;
-	border:none;
-
-	
+	left: 55%;
 }
-#textfield3{	
-	left: 0px;
-	top:190px;
-	border:none;
 
+#textfield3{	
+	left: 80%;
 }
 
 #textfield4{
 	display: none;
 }
 
-.note{
-	font-size: 50px;
-	font-weight: bold;
-	position: absolute;
-	right: 80px;
-	top: 35px
-}
-
+.note,
 .eq{
 	font-size: 50px;
 	font-weight: bold;
 	position: absolute;
-	right: 80px;
-	top: 130px
+	top:31%;left:38%;
 }
+
+.note{
+    left:51%;
+}
+
+.eq{
+	left:75%;
+}
+
+
+
+/* new Syle     ----------------------------------------------------------*/
+
+#counter{
+    flex: 1;
+    width: 100%;
+    background: rgb(238,238,238);
+    display: flex;
+    flex-direction: column;
+    /*visibility: hidden;*/
+}
+.show_something{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    min-height: 164px;
+    position: relative;
+}
+.show_icon{
+    flex: 6;
+    margin: auto;
+    display: flex;
+}
+.show_icon >i{
+    font-size: 8rem;
+    margin-left: 5%;
+    padding-left: 50px;
+}
+.show_icon>p{
+    font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
+    margin: auto 0 auto 5%;
+    font-size: 3.7rem;
+    color: rgb(102,102,102);
+}
+.show_money{
+    flex: 2;
+    display: flex;
+   
+}
+.show_money >i{
+    color: rgb(129,129,129);
+    font-style: normal;
+    margin: auto 0;
+    font-size: 5rem;
+}
+.show_money >p{
+    font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
+    color: rgb(129,129,129);
+    font-style: normal;
+    margin: auto 0 auto 5%;
+    font-size: 5rem;
+}
+.the_numbers{
+    width: 100%;
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+}
+.every_numbers{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    min-height: 151.7px;
+}
+.every_numbers >input{
+    font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
+    flex: 1;
+    display: flex;
+    display: block;
+    background: rgb(238,238,238);
+    text-align: center;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    font-size: 4.5rem;
+    color: rgb(102,102,102);
+    /*border-top: 1px solid #8e8e8e;*/
+    /*border-right: 1px solid #8e8e8e;*/
+}
+/* 计算器样式 结束*/
+
+
+
+

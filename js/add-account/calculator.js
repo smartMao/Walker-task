@@ -129,16 +129,11 @@
                 clk = 1;
         }
         if(clk == 1 || clk == 2){
-        	//alert(1);
-
-            //str1 = input4.value+21;//再次计算的时候，把结果赋值给str1
-           // str1 = parseInt(input3.value);
-
-           	//var mao = input3.value.substr("￥",1);
+        
            	var res = parseFloat(input3.value.replace('￥','')); // 转换之前的结果为数字
            
            	str1 = res;
-            input1.value = res;
+            input1.value = "￥" + res;
 
             str2 = "";
             input2.value = str2;
@@ -177,7 +172,7 @@
                 clk = 2;
                 //fuhao = "";
         }
-        if(value == "Reset"){
+        if(value == "C"){
             str1 = "";
             str2 = "";
             str4 = false;
@@ -189,18 +184,28 @@
             f_span.innerHTML = "";
             input3.value = "";
             eqNote.innerText = "";
+           
         }
-        if(value == "C"){
+        if(value == "←"){
+
             if(str1 == ""){
                 str4 = false;
             }
+
+
             if(fuhao1 =="" && str1!=""){
                 //alert(12);
                 str1 += "";
                 str1 = str1.substring(0,str1.length-1);
-                input1.value = str1;
+
+                input1.value = "￥" + str1;
                 input4.value = str1;
+
+                if( str1 == '' ){ // 如果没数字了 ￥ 也要清除
+                    input1.value = '';
+                }
             }
+
             if(str2 == "" && fuhao1 != ""){
                 fuhao1 = "";
                 f_span.innerHTML = fuhao1;
@@ -230,5 +235,3 @@
     for(i=0;i<inputArr.length;i++){
         EventUtil.addHandler(inputArr[i],"click",clickNum);
     }
-
-

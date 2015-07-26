@@ -20,7 +20,7 @@
 <body>
 <header id="add-header">
     <div class="add-left-icon">
-        <i class="iconfont">&#xe6cb;</i>
+        <i class="iconfont">&#xe62e;</i>
     </div>
     <div class="add-text">
         <h4>记一笔</h4>
@@ -78,64 +78,61 @@
     </div>
 </main>
 
-<!-- ----------------------------------------------------------------------------------------------------------- -->
-
 
 <!-- 存储第二次计算或更多次计算的结果 -->
-<input id="textfield4" type="text" value="0" size="100" maxlength="100"  readonly=""/>
+<input id="textfield4" type="text" value="0"  readonly=""/>
 
+<div id="counter">
+        <div class="show_something">
+            <div class="show_icon"  id="selected-type">
 
-<table id="btn_div"> 
-  	
-  	<tr>
-		<div class="show-area">
-			<div class="show-account-type">
-				<div class="a selected-type" id="selected-type">
-                    <i class="iconfont" style="color: rgb(243,159,97)"></i>
-                    <p></p>
-                </div>
-			</div>
-			<div class="show-account-number">
-				<input name="textfield1" type="text" id="textfield1" value="" size="25" maxlength="100" readonly="" />
-      			<span id="fuhao" class="note"> </span>
-      			<input name="textfield2" type="text" id="textfield2" size="25" maxlength="100" readonly="" />
-      			<span id="eq" class="eq"> </span>
-      			<input name="textfield3" type="text" id="textfield3" size="25" maxlength="100" readonly="" />
-			</div>
-				
-		</div>
-  	</tr>
+            
+                <i class="iconfont" style="color: rgb(243,159,97)"></i>
+                <p></p>
 
-	<tr>
-		<td><input type="button" name="Submit2" value="1" id="one" /></td>
-		<td><input type="button" name="Submit3" value="2" id="two" /></td>
-		<td><input type="button" name="Submit4" value="3" id="three"/></td>
-		<td><input type="button" name="Submit19" value="Reset" id="reset"/></td>
-	</tr>
+            </div>
+            <div class="show_money">
+  
+                <input name="textfield1" type="text" id="textfield1" value=""  readonly=""/>
+                <span id="fuhao" class="note"> </span>
+                <input name="textfield2" type="text" id="textfield2"  readonly="" />
+                <span id="eq" class="eq"> </span>
+                <input name="textfield3" type="text" id="textfield3"  readonly="" />
 
-	<tr>
-		<td><input type="button" name="Submit5" value="4" id="four"/></td>
-		<td><input type="button" name="Submit6" value="5"id="five" /></td>
-		<td><input type="button" name="Submit7" value="6" id="six"/></td>
-		<td><input type="button" name="Submit11" value="+" id="add"/></td>
-	</tr>
+            </div>
+        </div>
 
-	<tr>
+	<div class="the_numbers" id="btn_div">
+            <div class="every_numbers">
+                <input type="button" name="Submit2" value="1" id="one" />
+                <input type="button" name="Submit3" value="2" id="two" />
+                <input type="button" name="Submit4" value="3" id="three"/>
+                <input type="button" name="Submit19" value="←" id="reset"/>  
+            </div>
 
-		<td><input type="button" name="Submit8" value="7" id="seven"/></td>
-		<td><input type="button" name="Submit9" value="8" id="eight"/></td>
-		<td><input type="button" name="Submit10" value="9" id="nine"/></td>
-		<td><input type="button" name="Submit12" value="-" id="sub"/></td>
-	</tr>
+            <div class="every_numbers">
+                <input type="button" name="Submit5" value="4" id="four"/>
+                <input type="button" name="Submit6" value="5"id="five" />
+                <input type="button" name="Submit7" value="6" id="six"/>
+                <input type="button" name="Submit11" value="+" id="add"/>
+            </div>
 
-	<tr>
-		<td><input type="button" name="Submit20" value="C" id="del" /></td>
-		<td><input type="button" name="Submit" value="0" id="zero" /></td>
-		<td><input type="button" name="Submit18" value="." id="dot" /></td>
-		<td><input type="button" name="Submit16" value="=" id="deng"/></td>
-	</tr>
+            <div class="every_numbers">
+                <input type="button" name="Submit8" value="7" id="seven"/>
+                <input type="button" name="Submit9" value="8" id="eight"/>
+                <input type="button" name="Submit10" value="9" id="nine"/>
+                <input type="button" name="Submit12" value="-" id="sub"/>
 
-</table>
+            </div>
+
+            <div class="every_numbers">
+                <input type="button" name="Submit20" value="C" id="del" />
+                <input type="button" name="Submit" value="0" id="zero" />
+                <input type="button" name="Submit18" value="." id="dot" />
+                <input type="button" name="Submit16" value="=" id="deng"/>
+            </div>
+        </div>
+</div>
 
 <script src="js/add-account/calculator.js"></script>
 <script src="js/add-account/addType.js"></script>
