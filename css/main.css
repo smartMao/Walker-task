@@ -1,0 +1,188 @@
+/* 初始化样式 开始*/
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+*,*::after,*::before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.4rem;
+    overflow-x: hidden;
+}
+input{
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* 初始化样式 结束*/
+
+/* 首页样式 开始*/
+
+/* 头部 开始*/
+#index-header{
+    background: rgb(142,212,152);
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 888;
+}
+.head-nav-left,.head-wirte{
+    flex-grow: 1;
+}
+.nav-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+}
+.nav-list{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid white;
+    background: rgba(142,212,152,1);
+    display: none;
+}
+.nav-list >li{
+    float: left;
+}
+.nav-list >li >a{
+    display: inline-block;
+    line-height: 100px;
+    color: white;
+    vertical-align: middle;
+    text-decoration: none;
+    padding: 0 35px;
+    font-size: 2.7rem;
+}
+.head-text{
+    flex-grow: 6;
+    color: white;
+}
+.head-text >h4{
+    font-size: 4.5rem;
+    font-weight: normal;
+    font-style: normal;
+}
+.head-nav-left > i,.head-wirte >i, .head-text >h4{
+    line-height: 100px;
+}
+.head-nav-left >i,.head-wirte >i{
+    color: white;
+    font-size: 6rem;
+}
+/* 头部 结束*/
+
+/* 内容部分 开始*/
+.index-main{
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.index-main #content{
+    width: 95%;
+    height: 1000px;
+    float: right;
+}
+#content >ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+#content >ul >li{
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    flex-grow: 1;
+    display: flex;
+    text-align: left;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+#content >ul >li:nth-child(1){
+    border: none;
+}
+.theBox{
+    position: absolute;
+    width: 130%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-bottom: 2px dashed #8e8e8e;
+    display: flex;
+}
+.box-icon{
+    min-width: 100px;
+    flex-grow: .3;
+    margin: auto;
+}
+.box-text{
+    min-width: 100px;
+    margin: auto;
+}
+.box-text >h4{
+    font-size: 5rem;
+    color: #8e8e8e;
+    font-style: normal;
+    font-weight: normal;
+}
+.box-money{
+    flex-grow: 2;
+    min-width: 200px;
+    margin: auto;
+}
+.box-money >input{
+    float: left;
+    color:  rgb(142,212,152);
+    font-size:5rem;
+    padding-left: 15%;
+}
+.box-time{
+    min-width: 300px;
+    flex-grow: 4;
+}
+.box-time >p{
+    font-size: 2rem;
+    padding-top: 20px;
+    color: #8e8e8e;
+    text-align: left;
+}
+.box-change{
+    width: 20%;
+    position: relative;
+    display: flex;
+    color: white;
+    background:rgb(215,76,61);
+}
+.box-change-write,.box-change-del{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+.box-change-write >i,.box-change-del >i{
+    font-size: 7rem;
+}
+.box-icon i{
+    color:  rgb(142,212,152);
+    font-size: 7rem;
+}
+/* 内容部分 结束*/

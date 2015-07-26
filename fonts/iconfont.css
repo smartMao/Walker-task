@@ -15,14 +15,15 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-cha:before { content: "\e6cb"; }
+.icon-cha:before { content: "\e62e"; }
 .icon-07daohang:before { content: "\e656"; }
 .icon-xiao47:before { content: "\e892"; }
-.icon-bi:before { content: "\e689"; }
+.icon-bi:before { content: "\e691"; }
 .icon-qian:before { content: "\e61f"; }
 .icon-icon01:before { content: "\e605"; }
-.icon-chihuoying:before { content: "\e669"; }
+.icon-navyinshi:before { content: "\e66a"; }
 .icon-feiji:before { content: "\e88d"; }
 .icon-gouwu:before { content: "\e608"; }
 .icon-chonghuafei:before { content: "\e62c"; }
 .icon-lajitong:before { content: "\e675"; }
+.icon-taozhangshezhi:before { content: "\e609"; }

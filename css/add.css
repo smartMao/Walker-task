@@ -1,0 +1,182 @@
+/* 初始化样式 开始 */
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+*,*::after,*::before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.4rem;
+    overflow-x: hidden;
+}
+/* 初始化样式 结束 */
+
+/* 主体内容 开始 */
+#add-header{
+    width: 100%;
+    height: 100px;
+    background: rgb(245,245,245);
+    display: flex;
+    text-align: center;
+}
+.add-left-icon,.add-right-issus{
+    flex: 1.5;
+}
+.add-text{
+    flex: 6;
+}
+.add-left-icon >i,.add-text >h4,.add-right-issus >a{
+    line-height: 100px;
+}
+.add-left-icon >i{
+    font-size: 5rem;
+    color: rgb(139,139,139);
+}
+.add-text >h4{
+    font-size: 4.5rem;
+    color: rgb(139,139,139);
+    font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
+    font-weight: normal;
+}
+.add-right-issus >a{
+    font-size: 3rem;
+    padding: 10px 30px;
+    color: white;
+    background: rgb(142,212,152);
+    border-radius: 8px;
+    text-decoration: none;
+}
+#add-main{
+    position: absolute;
+    top: 100px;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling : touch;
+}
+.add-content{
+    width: 100%;
+    margin-left: 5%;
+}
+.add-content >ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.add-box{
+    flex: 1;
+    border-bottom: 2px solid #8e8e8e;
+    min-height: 150px;
+    display: flex;
+}
+.add-box > .a{
+    height: auto;
+    width: auto;
+    position: relative;
+    text-align: center;
+}
+.a >  i{
+    color:rgb(142,212,152) ;
+    font-size: 8rem;
+    padding: 40px;
+}
+.a > p{
+    font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
+    width: 100%;
+    color:#8e8e8e ;
+    font-size: 3.2rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    -moz-transform: translate3d(-50%, 0, 0);
+    -ms-transform: translate3d(-50%, 0, 0);
+    -o-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+}
+/* 主体内容 结束*/
+
+/* 计算器样式 开始*/
+#counter{
+    flex: 1;
+    width: 100%;
+    background: rgb(238,238,238);
+    display: flex;
+    flex-direction: column;
+    /*visibility: hidden;*/
+}
+.show_something{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    min-height: 164px;
+}
+.show_icon{
+    flex: 6;
+    margin: auto;
+    display: flex;
+}
+.show_icon >i{
+    font-size: 8rem;
+    margin-left: 5%;
+    padding-left: 50px;
+}
+.show_icon>p{
+    font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
+    margin: auto 0 auto 5%;
+    font-size: 3.7rem;
+    color: rgb(102,102,102);
+}
+.show_money{
+    flex: 2;
+    display: flex;
+}
+.show_money >i{
+    color: rgb(129,129,129);
+    font-style: normal;
+    margin: auto 0;
+    font-size: 5rem;
+}
+.show_money >p{
+    font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
+    color: rgb(129,129,129);
+    font-style: normal;
+    margin: auto 0 auto 5%;
+    font-size: 5rem;
+}
+.the_numbers{
+    width: 100%;
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+}
+.every_numbers{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    min-height: 151.7px;
+}
+.every_numbers >span{
+    font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
+    flex: 1;
+    display: flex;
+    background: rgb(238,238,238);
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5rem;
+    color: rgb(102,102,102);
+    border-top: 1px solid #8e8e8e;
+    border-right: 1px solid #8e8e8e;
+}
+/* 计算器样式 结束*/

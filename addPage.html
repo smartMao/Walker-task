@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>记一笔</title>
+    <meta name = "viewport" content = "width = device-width">
+    <meta name = "viewport" content = "initial-scale = 1.0">
+    <meta name = "viewport" content = "height = device-height">
+    <meta name = "viewport" content = "maximum-scale=1.0">
+    <meta name = "viewport" content = "user-scalable=no">
+    <meta name = "viewport" content = "user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <link type="text/css" rel="stylesheet" href="css/add.css">
+    <link type="text/css" rel="stylesheet" href="fonts/demo.css">
+    <link type="text/css" rel="stylesheet" href="fonts/iconfont.css">
+</head>
+<body>
+<header id="add-header">
+    <div class="add-left-icon">
+        <i class="iconfont">&#xe62e;</i>
+    </div>
+    <div class="add-text">
+        <h4>记一笔</h4>
+    </div>
+    <div class="add-right-issus">
+        <a>发布</a>
+    </div>
+</header>
+<main id="add-main">
+    <div class="add-content">
+        <ul>
+            <li class="add-box">
+                <div class="a">
+                    <i class="iconfont">&#xe61f;</i>
+                    <p>收入</p>
+                </div>
+            </li>
+            <li class="add-box">
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(243,159,97)">&#xe605;</i>
+                    <p>衣服</p>
+                </div>
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(254,137,136)">&#xe66a;</i>
+                    <p>餐饮</p>
+                </div>
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(198,179,156)">&#xe608;</i>
+                    <p>网购</p>
+                </div>
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(111,178,222)">&#xe88d;</i>
+                    <p>交通</p>
+                </div>
+            </li>
+            <li class="add-box">
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(218,90,76)">&#xe62c;</i>
+                    <p>话费</p>
+                </div>
+                <div class="a">
+                    <i class="iconfont" style="color: rgb(253,196,3)">&#xe609;</i>
+                    <p>其余</p>
+                </div>
+            </li>
+            </ul>
+         </div>
+    <div id="counter">
+        <div class="show_something">
+            <div class="show_icon">
+                <i class="iconfont" style="color: rgb(111,178,222)">&#xe88d;</i>
+                    <p>交通</p>
+            </div>
+            <div class="show_money">
+                <i>¥</i>
+                <p>777.123</p>
+            </div>
+        </div>
+        <div class="the_numbers">
+            <div class="every_numbers">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>回退</span>
+            </div>
+            <div class="every_numbers">
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>+</span>
+            </div>
+            <div class="every_numbers">
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>-</span>
+            </div>
+            <div class="every_numbers">
+                <span>C</span>
+                <span>0</span>
+                <span>.</span>
+                <span>=</span>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="jq/jquery-2.1.4.min.js"></script>
+<script>
+    var every_icon=document.getElementsByClassName("add-box");
+    var counter=document.getElementById("counter")
+    console.log(counter)
+
+    var sliders={
+        touchStart:function(e){
+            e.preventDefault();
+            $(counter).fadeToggle(500);
+        }
+    };
+    for(var i=0;i<every_icon.length;i++){
+        every_icon[i].addEventListener("touchstart",sliders.touchStart,false)
+    }
+</script>
+</body>
+</html>
