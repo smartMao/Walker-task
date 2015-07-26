@@ -65,7 +65,7 @@ window.onload=function(){
         touchStart:function(e){
             e.preventDefault();
             $(this).toggleClass("change_wirte_color")
-            location.href="addPage.html"
+            location.href="add-account.html"
         }
     };
     var add_one_Li=document.getElementsByClassName("head-wirte")[0];
