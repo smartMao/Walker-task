@@ -15,6 +15,7 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .icon-cha:before { content: "\e62e"; }
 .icon-07daohang:before { content: "\e656"; }
 .icon-xiao47:before { content: "\e892"; }
@@ -27,3 +28,5 @@
 .icon-chonghuafei:before { content: "\e62c"; }
 .icon-lajitong:before { content: "\e675"; }
 .icon-taozhangshezhi:before { content: "\e609"; }
+.icon-navyinshi:before { content: "\e66a"; }
+

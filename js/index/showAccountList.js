@@ -84,6 +84,8 @@ function findAllStorage(){
 
 	findAllStorage();
 
+	//localStorage.clear();
+
 
 	function getDate( timestamp ){ 
 		var timestamp=new Date(parseInt(timestamp) * 1000).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ") 
