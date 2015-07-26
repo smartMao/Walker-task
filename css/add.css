@@ -170,10 +170,11 @@ body{
     display: flex;
     min-height: 151.7px;
 }
-.every_numbers >span{
+.every_numbers >input{
     font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;
     flex: 1;
     display: flex;
+    display: block;
     background: rgb(238,238,238);
     justify-content: center;
     align-items: center;
