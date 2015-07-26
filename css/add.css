@@ -25,6 +25,8 @@ body{
     background: rgb(245,245,245);
     display: flex;
     text-align: center;
+    position: fixed;
+    z-index: 888;
 }
 .add-left-icon,.add-right-issus{
     flex: 1.5;
